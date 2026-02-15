@@ -1,0 +1,6 @@
+{
+  "name": "Avalon Miner",
+  "homeassistant": "2024.4.1",
+  "hacs": "2.0.1",
+  "content_in_root": false
+}

@@ -1,0 +1,141 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Device is already configured"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to miner. Please check the IP address and port.",
+      "unknown": "Unexpected error. Please try again later."
+    },
+    "step": {
+      "user": {
+        "title": "Connect your Avalon Miner",
+        "description": "Enter the IP address and port of your Avalon Miner.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "polling_interval": "Polling Interval"
+        },
+        "data_description": {
+          "host": "The hostname or IP address of your Avalon Miner",
+          "port": "API port (default: 4028)",
+          "polling_interval": "Polling interval in seconds"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "miner_running": {
+        "name": "Miner"
+      },
+      "pool_connected": {
+        "name": "Pool Connected"
+      }
+    },
+    "button": {
+      "reboot": {
+        "name": "Reboot"
+      },
+      "reset_filter": {
+        "name": "Reset Filter Clean"
+      }
+    },
+    "number": {
+      "fan_speed": {
+        "name": "Fan Speed"
+      },
+      "target_temperature": {
+        "name": "Target Temperature"
+      }
+    },
+    "select": {
+      "work_mode": {
+        "name": "Work Mode"
+      }
+    },
+    "sensor": {
+      "hashrate_5s": {
+        "name": "Hashrate 5s"
+      },
+      "hashrate_1m": {
+        "name": "Hashrate 1m"
+      },
+      "hashrate_5m": {
+        "name": "Hashrate 5m"
+      },
+      "hashrate_15m": {
+        "name": "Hashrate 15m"
+      },
+      "hashrate_avg": {
+        "name": "Hashrate Average"
+      },
+      "hashrate_current": {
+        "name": "Hashrate Current"
+      },
+      "temp_avg": {
+        "name": "Temperature Average"
+      },
+      "temp_max": {
+        "name": "Temperature Max"
+      },
+      "temp_inlet": {
+        "name": "Inlet Temperature"
+      },
+      "temp_target": {
+        "name": "Target Temperature"
+      },
+      "temp_hb_inlet": {
+        "name": "Hashboard Inlet Temperature"
+      },
+      "temp_hb_outlet": {
+        "name": "Hashboard Outlet Temperature"
+      },
+      "fan_speed_pct": {
+        "name": "Fan Speed"
+      },
+      "fan1_rpm": {
+        "name": "Fan 1"
+      },
+      "fan2_rpm": {
+        "name": "Fan 2"
+      },
+      "fan3_rpm": {
+        "name": "Fan 3"
+      },
+      "fan4_rpm": {
+        "name": "Fan 4"
+      },
+      "power_output": {
+        "name": "Power Output"
+      },
+      "accepted_shares": {
+        "name": "Accepted Shares"
+      },
+      "rejected_shares": {
+        "name": "Rejected Shares"
+      },
+      "hardware_errors": {
+        "name": "Hardware Errors"
+      },
+      "best_share": {
+        "name": "Best Share"
+      },
+      "found_blocks": {
+        "name": "Found Blocks"
+      },
+      "uptime": {
+        "name": "Uptime"
+      },
+      "work_mode_display": {
+        "name": "Work Mode"
+      },
+      "current_pool": {
+        "name": "Current Pool"
+      },
+      "pool_user": {
+        "name": "Pool User"
+      }
+    }
+  }
+}

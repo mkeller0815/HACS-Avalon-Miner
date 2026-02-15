@@ -1,0 +1,13 @@
+{
+  "domain": "avalon_miner",
+  "name": "Avalon Miner",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/your-repo/avalon-miner-ha",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/your-repo/avalon-miner-ha/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
