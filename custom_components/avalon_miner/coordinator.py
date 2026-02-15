@@ -10,8 +10,10 @@ from homeassistant.helpers.update_coordinator import (
     UpdateFailed,
 )
 
+from homeassistant.const import CONF_HOST
+
 from .api import AvalonMinerApiError
-from .const import DOMAIN, MANUFACTURER
+from .const import CONF_PORT, DEFAULT_PORT, DOMAIN, MANUFACTURER
 
 if TYPE_CHECKING:
     from homeassistant.core import HomeAssistant
@@ -47,6 +49,8 @@ class AvalonMinerDataUpdateCoordinator(DataUpdateCoordinator):
 
     @property
     def device_info(self) -> DeviceInfo:
+        host = self.entry.data[CONF_HOST]
+        port = self.entry.data.get(CONF_PORT, DEFAULT_PORT)
         return DeviceInfo(
             identifiers={(DOMAIN, self.entry.data["dna"])},
             name=f"{MANUFACTURER} {self.entry.data['model']}",
@@ -54,6 +58,7 @@ class AvalonMinerDataUpdateCoordinator(DataUpdateCoordinator):
             model=self.entry.data["model"],
             sw_version=self.entry.data.get("firmware", ""),
             serial_number=self.entry.data["dna"],
+            configuration_url=f"http://{host}:{port}",
         )
 
     async def async_set_fan_speed(self, value: int) -> None:
